@@ -1,0 +1,2 @@
+# magic-blog
+Personal blog

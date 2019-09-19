@@ -22,7 +22,7 @@
           <el-row type="flex" justify="center">
             <el-link href="/" style="color: whitesmoke;font-size:20px;">Home</el-link>
             <el-link style="margin-left: 0.75rem;color: whitesmoke;font-size:20px;" @click="handleLink('Category')">Category</el-link>
-            <el-link style="margin-left: 0.75rem;color: whitesmoke;font-size:20px;" @click="handleLink('Article')">Article</el-link>
+            <el-link href="/article" style="margin-left: 0.75rem;color: whitesmoke;font-size:20px;" @click="handleLink('Article')">Article</el-link>
             <el-link style="margin-left: 0.75rem;color: whitesmoke;font-size:20px;" @click="handleLink('Project')">Project</el-link>
             <el-link style="margin-left: 0.75rem;color: whitesmoke;font-size:20px;" @click="handleLink('Timeline')">Timeline</el-link>
             <el-link href="/about" style="margin-left: 0.75rem;color: whitesmoke;font-size:20px;">About</el-link>
@@ -55,7 +55,6 @@ Vue.component(Col.name, Col);
 Vue.component(Image.name, Image);
 Vue.component(Button.name, Button);
 Vue.component(Link.name, Link);
-Vue.component(Message.name, Message);
 
 export default Vue.extend({
   name: 'home',

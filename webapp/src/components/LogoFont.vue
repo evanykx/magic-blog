@@ -30,6 +30,7 @@ export default Vue.extend({
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
+    cursor: pointer;
   }
 }
 </style>

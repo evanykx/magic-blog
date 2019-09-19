@@ -1,10 +1,12 @@
 export const m = {
   introduce: 'Introduction',
+  introduction: 'Hi, my name is Yu Hao, obviously I\'m Chinese. Also you can call me Evan. I\'m a software engineer.',
   category: 'Category',
   article: 'Article',
   project: 'Project',
   timeline: 'Timeline',
   about: 'About',
+  language: 'Language',
   chinese: 'Chinese',
   english: 'English',
   japanese: 'Japanese',

@@ -16,7 +16,7 @@
           <el-menu-item index="6">{{ $t('m.about') }}</el-menu-item>
           <el-menu-item disabled>|</el-menu-item>
           <el-submenu index="7">
-            <template slot="title">{{language}}</template>
+            <template slot="title">{{ $t('m.language') }}</template>
             <el-menu-item index="7-1">{{ $t('m.chinese') }}</el-menu-item>
             <el-menu-item index="7-2">{{ $t('m.english') }}</el-menu-item>
             <el-menu-item index="7-3">{{ $t('m.japanese') }}</el-menu-item>
@@ -58,25 +58,21 @@ export default Vue.extend({
         return this.$store.state.activeIndex;
       },
     },
-    language: {
-      get() {
-        return this.$store.state.language;
-      },
-    },
   },
   methods: {
     handleSelect(key: string, keyPath: []) {
       if (key.startsWith('7')) {
         if (key === '7-1') {
-          this.$i18n.locale = 'zh-CN';
+          // this.$i18n.locale = 'zh-CN';
           this.$store.commit('languageChange', 'zh');
         } else if (key === '7-3') {
-          this.$i18n.locale = 'ja-JP';
-          this.$store.commit('languageChange', 'jp');
+          // this.$i18n.locale = 'ja-JP';
+          this.$store.commit('languageChange', 'ja');
         } else {
-          this.$i18n.locale = 'en-US';
+          // this.$i18n.locale = 'en-US';
           this.$store.commit('languageChange', 'en');
         }
+        this.$i18n.locale = this.$store.state.lang;
       } else {
         this.$store.commit('activeIndexChange', key);
       }

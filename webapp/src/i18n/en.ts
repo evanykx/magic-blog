@@ -1,5 +1,5 @@
 export const m = {
-  home: 'Home',
+  introduce: 'Introduction',
   category: 'Category',
   article: 'Article',
   project: 'Project',

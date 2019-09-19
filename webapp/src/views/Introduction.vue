@@ -1,5 +1,5 @@
 <template>
-  <div class="article">
+  <div class="introduce">
     <el-container>
       <el-header>
         <top-menu />
@@ -32,14 +32,14 @@ Vue.component(Row.name, Row);
 Vue.component(Col.name, Col);
 
 export default Vue.extend({
-  name: 'article',
+  name: 'introduction',
   components: {
     TopMenu,
     MainContent,
     FooterArea,
   },
   mounted() {
-    this.$store.commit('activeIndexChange', 3);
+    this.$store.commit('activeIndexChange', 1);
   },
 });
 </script>
@@ -49,7 +49,7 @@ body {
   overflow: scroll !important;
   overflow-y:auto !important;
 }
-.article {
+.introduce {
   width: 100%;
   height: 100%;
   background-color: azure;

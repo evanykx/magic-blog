@@ -9,6 +9,7 @@ export default new Vuex.Store({
     username: 'evanykx',
     activeIndex: '1',
     language: 'English',
+    lang: 'en',
   },
   mutations: {
     activeIndexChange(state, idx: string = '1') {
@@ -16,11 +17,11 @@ export default new Vuex.Store({
     },
     languageChange(state, lang: string) {
       if (lang === 'en') {
-        return (state.language = 'English');
+        return (state.language = 'English', state.lang = 'en-US');
       } else if (lang === 'zh') {
-        return (state.language = '中文');
+        return (state.language = '中文', state.lang = 'zh-CN');
       } else {
-        return (state.language = '日本語');
+        return (state.language = '日本語', state.lang = 'ja-JP');
       }
     },
   },

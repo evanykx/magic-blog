@@ -1,6 +1,6 @@
 <template>
   <div class="logo">
-    <span class="logo-font">{{ $t('m.logo') }}</span>
+    <span class="logo-font" @click="handleClick">{{ $t('m.logo') }}</span>
   </div>
 </template>
 
@@ -9,6 +9,11 @@ import Vue from 'vue';
 
 export default Vue.extend({
   name: 'logo-font',
+  methods: {
+    handleClick() {
+      this.$router.push('/');
+    },
+  },
 });
 </script>
 

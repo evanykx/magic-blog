@@ -1,5 +1,5 @@
 export const m = {
-  home: 'ホームページ',
+  introduce: '紹介',
   category: '分類',
   article: 'アーティクル',
   project: 'プロジェクト',

@@ -20,7 +20,7 @@
       <el-row type="flex" justify="center" style="margin-top: 2rem;">
         <el-col :span="6">
           <el-row type="flex" justify="center">
-            <el-link href="/" style="color: whitesmoke;font-size:20px;">Home</el-link>
+            <el-link href="/introduction" style="color: whitesmoke;font-size:20px;">Introduction</el-link>
             <el-link style="margin-left: 0.75rem;color: whitesmoke;font-size:20px;" @click="handleLink('Category')">Category</el-link>
             <el-link href="/article" style="margin-left: 0.75rem;color: whitesmoke;font-size:20px;" @click="handleLink('Article')">Article</el-link>
             <el-link style="margin-left: 0.75rem;color: whitesmoke;font-size:20px;" @click="handleLink('Project')">Project</el-link>

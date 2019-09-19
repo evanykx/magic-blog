@@ -1,5 +1,5 @@
 export const m = {
-  home: '首页',
+  introduce: '简介',
   category: '分类',
   article: '文章',
   project: '项目',

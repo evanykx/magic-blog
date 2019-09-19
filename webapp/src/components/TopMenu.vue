@@ -1,14 +1,14 @@
 <template>
     <el-row  class="top-menu">
-      <el-col :span="10">
+      <el-col :span="12">
         <logo-font />
       </el-col>
-      <el-col :span="14">
+      <el-col :span="12">
         <el-menu 
           mode="horizontal"
           :default-active="activeIndex"
           @select="handleSelect">
-          <el-menu-item index="1">{{ $t('m.home') }}</el-menu-item>
+          <el-menu-item index="1">{{ $t('m.introduce') }}</el-menu-item>
           <el-menu-item index="2">{{ $t('m.category') }}</el-menu-item>
           <el-menu-item index="3">{{ $t('m.article') }}</el-menu-item>
           <el-menu-item index="4">{{ $t('m.project') }}</el-menu-item>
@@ -21,9 +21,9 @@
             <el-menu-item index="7-2">{{ $t('m.english') }}</el-menu-item>
             <el-menu-item index="7-3">{{ $t('m.japanese') }}</el-menu-item>
           </el-submenu>
-          <el-menu-item disabled>|</el-menu-item>
+          <!-- <el-menu-item disabled>|</el-menu-item>
           <el-menu-item index="8">{{ $t('m.signin') }}</el-menu-item>
-          <el-menu-item index="9">{{ $t('m.signup') }}</el-menu-item>
+          <el-menu-item index="9">{{ $t('m.signup') }}</el-menu-item> -->
         </el-menu>
       </el-col>
     </el-row>
@@ -78,9 +78,6 @@ export default Vue.extend({
           this.$store.commit('languageChange', 'en');
         }
       } else {
-        if (key === '1') {
-          this.$router.push('/');
-        }
         this.$store.commit('activeIndexChange', key);
       }
 

@@ -1,24 +1,14 @@
 <template>
-  <div class="article">
-    <el-container>
-      <el-header>
-        <top-menu />
-      </el-header>
-      <el-main>
-        <main-content />
-      </el-main>
-      <el-footer>
-        <footer-area />
-      </el-footer>
-    </el-container>
-  </div>
+  <layout curIdx="3">
+    <div slot="main">
+      album
+    </div>
+  </layout>
 </template>
 
 <script lang="ts">
 import Vue from 'vue';
-import TopMenu from '@/components/TopMenu.vue';
-import MainContent from '@/components/MainContent.vue';
-import FooterArea from '@/components/FooterArea.vue';
+import Layout from '@/views/Layout.vue';
 import {
   Container, Header, Main, Footer,
   Row, Col,
@@ -32,33 +22,13 @@ Vue.component(Row.name, Row);
 Vue.component(Col.name, Col);
 
 export default Vue.extend({
-  name: 'article',
+  name: 'mb-article',
   components: {
-    TopMenu,
-    MainContent,
-    FooterArea,
-  },
-  mounted() {
-    this.$store.commit('activeIndexChange', 3);
+    Layout,
   },
 });
 </script>
 
 <style lang="less">
-body {
-  overflow: scroll !important;
-  overflow-y:auto !important;
-}
-.article {
-  width: 100%;
-  height: 100%;
-  background-color: azure;
-  .el-container {
-    background-color: white;
-  }
-  .el-main {    
-    width: 100%;
-    height: 1000px;    
-  }
-}
+
 </style>

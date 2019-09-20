@@ -1,10 +1,7 @@
 <template>
   <div class="introduce">
-    <el-container>
-      <el-header>
-        <top-menu />
-      </el-header>
-      <el-main>
+    <layout curIdx="1">
+      <div slot="main">
         <el-row type="flex" justify="center">
           <div class="intro-main-box">
             <!-- Carousel -->
@@ -24,14 +21,14 @@
                       <span>{{ item.lang }}</span>
                     </el-col>
                     <el-col :span="21">
-                      <el-progress :percentage="item.percentage" stroke-width="20" text-inside="true" :status="item.status"></el-progress>
+                      <el-progress :percentage="item.percentage" :stroke-width="20" :text-inside="true" :status="item.status"></el-progress>
                     </el-col>
                   </el-row>
                 </div>
               </el-card>
             </div>
             <!-- Timeline -->
-            <el-timeline reverse="true" class="intro-timeline">
+            <el-timeline :reverse="true" class="intro-timeline">
               <el-timeline-item 
                 v-for="(item, index) in timelineItems"
                 :key="index"
@@ -67,18 +64,14 @@
             </el-timeline>
           </div>
         </el-row>
-      </el-main>
-      <el-footer>
-        <footer-area />
-      </el-footer>
-    </el-container>
+      </div>
+    </layout>
   </div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue';
-import TopMenu from '@/components/TopMenu.vue';
-import FooterArea from '@/components/FooterArea.vue';
+import Layout from '@/views/Layout.vue';
 import {
   Container, Header, Main, Footer, Aside,
   Row, Col,
@@ -112,15 +105,15 @@ export default Vue.extend({
         {url: require('../assets/winter.jpg'), name: 'Winter'},
       ],
       skills: [
-        {lang: 'Java', percentage: '75', status: 'primary'},
-        {lang: 'JavaScript', percentage: '90', status: 'success'},
-        {lang: 'React', percentage: '85', status: 'success'},
-        {lang: 'Vue', percentage: '83', status: 'success'},
-        {lang: 'Python', percentage: '60', status: 'warning'},
-        {lang: 'Android', percentage: '25', status: 'exception'},
-        {lang: 'iOS', percentage: '20', status: 'exception'},
-        {lang: 'MongoDB', percentage: '50', status: 'warning'},
-        {lang: 'Mysql', percentage: '50', status: 'warning'},
+        {lang: 'Java', percentage: 75, status: 'primary'},
+        {lang: 'JavaScript', percentage: 90, status: 'success'},
+        {lang: 'React', percentage: 85, status: 'success'},
+        {lang: 'Vue', percentage: 83, status: 'success'},
+        {lang: 'Python', percentage: 60, status: 'warning'},
+        {lang: 'Android', percentage: 25, status: 'exception'},
+        {lang: 'iOS', percentage: 20, status: 'exception'},
+        {lang: 'MongoDB', percentage: 50, status: 'warning'},
+        {lang: 'Mysql', percentage: 50, status: 'warning'},
       ],
       timelineItems: [
         {
@@ -169,27 +162,17 @@ export default Vue.extend({
     };
   },
   components: {
-    TopMenu,
-    FooterArea,
-  },
-  mounted() {
-    this.$store.commit('activeIndexChange', 1);
+    Layout,
   },
 });
 </script>
 
 <style lang="less">
-body {
-  overflow: scroll !important;
-  overflow-y:auto !important;
-}
+
 .introduce {
   width: 100%;
   height: 100%;
   background-color: white;
-  .el-container {
-    background-color: white;
-  }
   .intro {
     &-main-box {
       width: 1080px;

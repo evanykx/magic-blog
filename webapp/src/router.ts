@@ -4,6 +4,7 @@ import Home from './views/Home.vue';
 import Article from './views/Article.vue';
 import Introduction from './views/Introduction.vue';
 import Album from './views/Album.vue';
+import AlbumDetail from './views/AlbumDetail.vue';
 import Project from './views/Project.vue';
 import Timeline from './views/Timeline.vue';
 
@@ -24,13 +25,18 @@ export default new Router({
       component: Introduction,
     },
     {
+      path: '/album/detail',
+      name: 'album-detail',
+      component: AlbumDetail,
+    },
+    {
       path: '/album',
       name: 'album',
       component: Album,
     },
     {
       path: '/article',
-      name: 'article',
+      name: 'mb-article',
       component: Article,
     },
     {

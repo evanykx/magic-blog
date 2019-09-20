@@ -16,10 +16,17 @@
             <div class="introduction">
               <el-card>
                 <div slot="header">
-                  <span class="introduction-title">{{ $t('m.introduce') }}</span>
+                  <span class="introduction-title">{{ $t('m.skill') }}</span>
                 </div>
-                <div>
-                  <p>{{ $t('m.introduction') }}</p>
+                <div class="skill-list">
+                  <el-row v-for="(item, index) in skills" :key="index">
+                    <el-col :span="3">
+                      <span>{{ item.lang }}</span>
+                    </el-col>
+                    <el-col :span="21">
+                      <el-progress :percentage="item.percentage" stroke-width="20" text-inside="true" :status="item.status"></el-progress>
+                    </el-col>
+                  </el-row>
                 </div>
               </el-card>
             </div>
@@ -77,7 +84,7 @@ import {
   Row, Col,
   Carousel, CarouselItem,
   Timeline, TimelineItem,
-  Card,
+  Card, Progress,
 } from 'element-ui';
 
 Vue.component(Container.name, Container);
@@ -92,6 +99,7 @@ Vue.component(CarouselItem.name, CarouselItem);
 Vue.component(Timeline.name, Timeline);
 Vue.component(TimelineItem.name, TimelineItem);
 Vue.component(Card.name, Card);
+Vue.component(Progress.name, Progress);
 
 export default Vue.extend({
   name: 'introduction',
@@ -102,6 +110,17 @@ export default Vue.extend({
         {url: require('../assets/summer.jpg'), name: 'Summer'},
         {url: require('../assets/autumn.jpg'), name: 'Autumn'},
         {url: require('../assets/winter.jpg'), name: 'Winter'},
+      ],
+      skills: [
+        {lang: 'Java', percentage: '75', status: 'primary'},
+        {lang: 'JavaScript', percentage: '90', status: 'success'},
+        {lang: 'React', percentage: '85', status: 'success'},
+        {lang: 'Vue', percentage: '83', status: 'success'},
+        {lang: 'Python', percentage: '60', status: 'warning'},
+        {lang: 'Android', percentage: '25', status: 'exception'},
+        {lang: 'iOS', percentage: '20', status: 'exception'},
+        {lang: 'MongoDB', percentage: '50', status: 'warning'},
+        {lang: 'Mysql', percentage: '50', status: 'warning'},
       ],
       timelineItems: [
         {
@@ -212,6 +231,12 @@ body {
       width: 250px;
       height: 170px;
       border-radius: 0.75rem;
+    }
+  }
+
+  .skill-list {
+    .el-row {
+      margin: 0.5rem 0.25rem;
     }
   }
 }

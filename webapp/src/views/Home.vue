@@ -20,24 +20,24 @@
       <el-row type="flex" justify="center" style="margin-top: 2rem;">
         <el-col :span="6">
           <el-row type="flex" justify="center">
-            <el-link href="/introduction" style="color: whitesmoke;font-size:20px;">Introduction</el-link>
-            <el-link style="margin-left: 0.75rem;color: whitesmoke;font-size:20px;" @click="handleLink('Category')">Category</el-link>
-            <el-link href="/article" style="margin-left: 0.75rem;color: whitesmoke;font-size:20px;" @click="handleLink('Article')">Article</el-link>
-            <el-link style="margin-left: 0.75rem;color: whitesmoke;font-size:20px;" @click="handleLink('Project')">Project</el-link>
-            <el-link style="margin-left: 0.75rem;color: whitesmoke;font-size:20px;" @click="handleLink('Timeline')">Timeline</el-link>
-            <el-link href="/about" style="margin-left: 0.75rem;color: whitesmoke;font-size:20px;">About</el-link>
+            <el-link href="/introduction" style="color: whitesmoke;font-size:20px;">{{ $t('m.introduce') }}</el-link>
+            <el-link href="/album" style="margin-left: 0.75rem;color: whitesmoke;font-size:20px;">{{ $t('m.album') }}</el-link>
+            <el-link href="/article" style="margin-left: 0.75rem;color: whitesmoke;font-size:20px;">{{ $t('m.article') }}</el-link>
+            <el-link href="/project" style="margin-left: 0.75rem;color: whitesmoke;font-size:20px;">{{ $t('m.project') }}</el-link>
+            <el-link href="/timeline" style="margin-left: 0.75rem;color: whitesmoke;font-size:20px;">{{ $t('m.timeline') }}</el-link>
+            <el-link href="/about" style="margin-left: 0.75rem;color: whitesmoke;font-size:20px;">{{ $t('m.about') }}</el-link>
           </el-row>
         </el-col>
       </el-row>
       <el-row type="flex" justify="center" style="margin-top: 2rem;">
         <el-col :span="6">
           <el-row type="flex" justify="center">
-            <el-button icon="el-icon-search" circle @click="handleBtn('search')"></el-button>
-            <el-button type="primary" icon="el-icon-edit" circle @click="handleBtn('edit')"></el-button>
-            <el-button type="success" icon="el-icon-check" circle @click="handleBtn('check')"></el-button>
-            <el-button type="info" icon="el-icon-message" circle @click="handleBtn('message')"></el-button>
-            <el-button type="warning" icon="el-icon-star-off" circle @click="handleBtn('star')"></el-button>
-            <el-button type="danger" icon="el-icon-delete" circle @click="handleBtn('delete')"></el-button>
+            <el-button icon="el-icon-search" circle @click="handleBtn('/introduction')"></el-button>
+            <el-button type="primary" icon="el-icon-edit" circle @click="handleBtn('/album')"></el-button>
+            <el-button type="success" icon="el-icon-check" circle @click="handleBtn('/article')"></el-button>
+            <el-button type="info" icon="el-icon-message" circle @click="handleBtn('/project')"></el-button>
+            <el-button type="warning" icon="el-icon-star-off" circle @click="handleBtn('/timeline')"></el-button>
+            <el-button type="danger" icon="el-icon-delete" circle @click="handleBtn('/about')"></el-button>
           </el-row>
         </el-col>
       </el-row>
@@ -64,11 +64,8 @@ export default Vue.extend({
     BgCanvas,
   },
   methods: {
-    handleLink(link: string) {
-      Message({message: link});
-    },
     handleBtn(link: string) {
-      Notification({title: 'Notice', message: link});
+      this.$router.push(link);
     },
   },
 });

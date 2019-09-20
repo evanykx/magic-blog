@@ -9,7 +9,7 @@
           :default-active="activeIndex"
           @select="handleSelect">
           <el-menu-item index="1">{{ $t('m.introduce') }}</el-menu-item>
-          <el-menu-item index="2">{{ $t('m.category') }}</el-menu-item>
+          <el-menu-item index="2">{{ $t('m.album') }}</el-menu-item>
           <el-menu-item index="3">{{ $t('m.article') }}</el-menu-item>
           <el-menu-item index="4">{{ $t('m.project') }}</el-menu-item>
           <el-menu-item index="5">{{ $t('m.timeline') }}</el-menu-item>
@@ -36,6 +36,7 @@ import {
   Row, Col,
   Menu, MenuItem, MenuItemGroup, Submenu,
   Notification,
+  Message,
 } from 'element-ui';
 
 Vue.component(Row.name, Row);
@@ -75,9 +76,25 @@ export default Vue.extend({
         this.$i18n.locale = this.$store.state.lang;
       } else {
         this.$store.commit('activeIndexChange', key);
+        if (key === '1') {
+          this.$router.push('/introduction');
+        }
+        if (key === '2') {
+          this.$router.push('/album');
+        }
+        if (key === '3') {
+          this.$router.push('/article');
+        }
+        if (key === '4') {
+          this.$router.push('/project');
+        }
+        if (key === '5') {
+          this.$router.push('/timeline');
+        }
+        if (key === '6') {
+          this.$router.push('/about');
+        }
       }
-
-      Notification({title: 'Notice', message: key});
     },
   },
 });

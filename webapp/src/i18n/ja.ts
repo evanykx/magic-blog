@@ -1,11 +1,12 @@
 export const m = {
   introduce: '紹介',
   introduction: '初めまして、私は　ヨ　コウ　です。よろしくお願いいたします。',
-  category: '分類',
+  album: 'アルバム',
   article: 'アーティクル',
   project: 'プロジェクト',
   timeline: '足跡',
   about: 'プロフィール',
+  skill: 'スキル',
   language: '言語',
   chinese: '中国語',
   english: '英語',

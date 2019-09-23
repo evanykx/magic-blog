@@ -1,0 +1,17 @@
+export const m = {
+  introduce: 'Introduction',
+  introduction: 'Hi, my name is Yu Hao, obviously I\'m Chinese. Also you can call me Evan. I\'m a software engineer.',
+  album: 'Album',
+  article: 'Article',
+  project: 'Project',
+  timeline: 'Timeline',
+  about: 'About',
+  skill: 'Skill',
+  language: 'Language',
+  chinese: 'Chinese',
+  english: 'English',
+  japanese: 'Japanese',
+  signin: 'Sign In',
+  signup: 'Sign Up',
+  logo: 'Knowledge is infinite',
+};

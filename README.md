@@ -38,11 +38,11 @@ This project is just a practise demo for how to use a font-end framework. This i
   > yarn serve
 ```
 3. Some screenshots
-- ![index page]("https://github.com/evanykx/magic-blog/tree/master/webapp/screenshot/index_page.png",  "Index page")
-- ![home page en]("https://github.com/evanykx/magic-blog/tree/master/webapp/screenshot/en.png",  "Home page(english version)")
-- ![home page zh]("https://github.com/evanykx/magic-blog/tree/master/webapp/screenshot/zh.png",  "Home page(chinese version)")
-- ![home page ja]("https://github.com/evanykx/magic-blog/tree/master/webapp/screenshot/ja.png",  "Home page(japanese version)")
-- ![album page]("https://github.com/evanykx/magic-blog/tree/master/webapp/screenshot/album.png",  "Album page")
-- ![photo preview page]("https://github.com/evanykx/magic-blog/tree/master/webapp/screenshot/photo.png",  "photo preview page")
-- ![video list page]("https://github.com/evanykx/magic-blog/tree/master/webapp/screenshot/av_list.png",  "Video list page")
-- ![video play page]("https://github.com/evanykx/magic-blog/tree/master/webapp/screenshot/av.png",  "Video play page")
+- ![webapp/screenshot/index_page.png]("https://github.com/evanykx/magic-blog/master/webapp/screenshot/index_page.png",  "Index page")
+- ![webapp/screenshot/en.png]("https://github.com/evanykx/magic-blog/master/webapp/screenshot/en.png",  "Home page(english version)")
+- ![webapp/screenshot/zh.png]("https://github.com/evanykx/magic-blog/master/webapp/screenshot/zh.png",  "Home page(chinese version)")
+- ![webapp/screenshot/ja.png]("https://github.com/evanykx/magic-blog/master/webapp/screenshot/ja.png",  "Home page(japanese version)")
+- ![webapp/screenshot/album.png]("https://github.com/evanykx/magic-blog/master/webapp/screenshot/album.png",  "Album page")
+- ![webapp/screenshot/photo.png]("https://github.com/evanykx/magic-blog/master/webapp/screenshot/photo.png",  "photo preview page")
+- ![webapp/screenshot/av_list.png]("https://github.com/evanykx/magic-blog/master/webapp/screenshot/av_list.png",  "Video list page")
+- ![webapp/screenshot/av.png]("https://github.com/evanykx/magic-blog/master/webapp/screenshot/av.png",  "Video play page")

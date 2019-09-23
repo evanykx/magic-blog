@@ -15,7 +15,7 @@
         
         :title="video.name"
         :visible.sync="dialogVisible"
-        width="30%"
+        width="60%"
         @opened="handleVideoPlay"
         :before-close="handleDialogClose">
         <el-row type="flex" justify="center" align="center" height="100%" id="player">
@@ -60,7 +60,7 @@ export default Vue.extend({
   methods: {
     handleDialogOpen(url: any, type: string) {
       const v: any = document.getElementById('player');
-      v.innerHTML = '<video id="detail-player" width="530" height="240" controls>' +
+      v.innerHTML = '<video id="detail-player" width="1080" height="480" controls>' +
           '<source src="' + url + '" type="' + type + '">' +
           '</video>';
     },
@@ -69,11 +69,11 @@ export default Vue.extend({
       v.play();
     },
     handleVideoDialogShow(name: string, type: string) {
-      this.video.name = name; 
-      const _type = 'video/' + type;
-      const _url = require('../assets/audio/' + name + '.' + type);      
+      this.video.name = name;
+      const typeStr = 'video/' + type;
+      const urlObj = require('../assets/audio/' + name + '.' + type);
       this.dialogVisible = true;
-      this.handleDialogOpen(_url, _type);
+      this.handleDialogOpen(urlObj, typeStr);
     },
     handleDialogClose() {
       this.dialogVisible = false;

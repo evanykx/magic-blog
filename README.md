@@ -38,11 +38,11 @@ This project is just a practise demo for how to use a font-end framework. This i
   > yarn serve
 ```
 3. Some screenshots
-- ![index page]("https://github.com/evanykx/image-resources/magic-blog-index-page.png",  "Index page")
-- ![home page en]("https://github.com/evanykx/image-resources/magic-blog-home-en.png",  "Home page(english version)")
-- ![home page zh]("https://github.com/evanykx/image-resources/magic-blog-home-zh.png",  "Home page(chinese version)")
-- ![home page ja]("https://github.com/evanykx/image-resources/magic-blog-home-ja.png",  "Home page(japanese version)")
-- ![album page]("https://github.com/evanykx/image-resources/magic-blog-album.png",  "Album page")
-- ![photo preview page]("https://github.com/evanykx/image-resources/magic-blog-photo.png",  "photo preview page")
-- ![video list page]("https://github.com/evanykx/image-resources/magic-blog-video-list.png",  "Video list page")
-- ![video play page]("https://github.com/evanykx/image-resources/magic-blog-video.png",  "Video play page")
+- ![index page]("https://github.com/evanykx/image-resources/raw/master/magic-blog-index-page.png",  "Index page")
+- ![home page en]("https://github.com/evanykx/image-resources/raw/master/magic-blog-home-en.png",  "Home page(english version)")
+- ![home page zh]("https://github.com/evanykx/image-resources/raw/master/magic-blog-home-zh.png",  "Home page(chinese version)")
+- ![home page ja]("https://github.com/evanykx/image-resources/raw/master/magic-blog-home-ja.png",  "Home page(japanese version)")
+- ![album page]("https://github.com/evanykx/image-resources/raw/master/magic-blog-album.png",  "Album page")
+- ![photo preview page]("https://github.com/evanykx/raw/master/image-resources/magic-blog-photo.png",  "photo preview page")
+- ![video list page]("https://github.com/evanykx/raw/master/image-resources/magic-blog-video-list.png",  "Video list page")
+- ![video play page]("https://github.com/evanykx/image-resources/raw/master/magic-blog-video.png",  "Video play page")
